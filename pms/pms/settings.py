@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user',
     'project'
+    'crispy_forms',
+    'crispy_bootstrap4'
+   
 ]
 
 MIDDLEWARE = [
@@ -124,13 +127,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
  
-STATIC_URL = "/static/"
-STATIC_ROOT = "/static"
+STATIC_URL = '/static/'
+STATIC_ROOT = '/static'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 STATICFILES_DIRS = [
     STATIC_DIR,
-]
-MEDIA_URL = 'media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+ ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -145,5 +148,4 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'parthbhaidasna69@gmail.com'
 EMAIL_HOST_PASSWORD = 'azjcqpgyvaxefark'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
